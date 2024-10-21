@@ -27,8 +27,8 @@ def rename_files(projects):
     directory = os.path.dirname(os.path.abspath(__file__))
     
     for project in projects:
-        old_name = f"{project['project_number']}.py"  # Use zero-padding for project numbers
-        new_name = f"{project['short_file_name']}.py"
+        old_name = f"{project['short_file_name']}.py"  # Use zero-padding for project numbers
+        new_name = f"{project['project_number']}_{project['short_file_name']}.py"
         old_path = os.path.join(directory, old_name)
         new_path = os.path.join(directory, new_name)
         
